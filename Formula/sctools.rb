@@ -1,8 +1,8 @@
 class Sctools < Formula
   desc "Tools for Soarer's Converter"
   homepage "https://github.com/Kreeblah/sctools_macos"
-  url "https://github.com/Kreeblah/sctools_macos/archive/v1.10.1.tar.gz"
-  sha256 "eca1455f45290ecadf42ff589921cb79e332675073db06ba24659e09bedc8280"
+  url "https://github.com/Kreeblah/sctools_macos/archive/v1.13.tar.gz"
+  sha256 "146e3e401d17dfed4f770b9f3d37d3af0959d724be88fadfb3822867978a2fb9"
 
   def install
     Dir.chdir("build/macosx")
