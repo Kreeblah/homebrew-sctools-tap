@@ -1,12 +1,13 @@
 class Sctools < Formula
   desc "Tools for Soarer's Converter"
   homepage "https://github.com/Kreeblah/sctools_macos"
-  url "https://github.com/Kreeblah/sctools_macos/archive/v1.14.1.tar.gz"
-  sha256 "d1e3031ba6fc3edd2eb3a8b0510052455aaea070fc720abc3243667b19c552d4"
+  url "https://github.com/Kreeblah/sctools_macos/archive/v1.14.2.tar.gz"
+  sha256 "5af48cbbe03a3b77c1e5f00c47085e7624c96329f5279868e0af35fe7d5a89cd"
 
   def install
+    arch = Hardware::CPU.arm? ? "arm64" : "x86_64"
     Dir.chdir("build/macosx")
-    system "make"
+    system "make", "ARCH=#{arch}"
     bin.install "../../bin/scas"
     bin.install "../../bin/scboot"
     bin.install "../../bin/scdis"
